@@ -92,6 +92,9 @@ body {
   &__h2 {
     font-size: 48px;
   }
+  &__h3 {
+    font-size: 20px;
+  }
   &--white {
     color: white;
   }
@@ -161,9 +164,14 @@ body {
 
 .gallery {
   display: grid;
+  gap: 32px;
+
+  &--col-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   &--col-3 {
     grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
   }
 }
 
@@ -178,7 +186,45 @@ body {
 }
 
 .section {
+  &--gray {
+    background-color: #eeeeee;
+  }
+  &--white {
+    background-color: white;
+  }
   &--black {
     background-color: #191919;
+  }
+}
+
+.about-card {
+  &__image {
+    margin-bottom: 32px;
+  }
+  &__hgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.cooperation {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  // TOD0 переделать
+  max-width: 640px;
+  margin: auto;
+
+  &__card {
+    max-width: 160px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
   }
 }
