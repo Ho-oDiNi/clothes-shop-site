@@ -1,3 +1,157 @@
-h1 {
+@font-face {
+  font-family: "RFDewiExpanded";
+  src: url("./fonts/RFDewiExpandedBold.otf") format("otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  margin: auto;
+  max-width: 70rem;
+  display: flex;
+  flex-direction: column;
+}
+.container--gap-60 {
+  gap: 60px;
+}
+
+.header {
+  padding: 2rem;
+}
+.header--image {
+  background-image: url(./images/header.png);
+  height: 36rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.nav__list-item {
+  display: flex;
+  flex-direction: column;
+}
+.nav__link--white, .nav__span--white {
   color: white;
+}
+.nav__link {
+  font-family: "RFDewiExpanded";
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+}
+.nav__span {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 800;
+}
+.title--space {
+  margin: 120px auto 64px;
+  max-width: 635px;
+}
+.title__h1 {
+  font-size: 60px;
+}
+.title__h2 {
+  font-size: 48px;
+}
+.title--white {
+  color: white;
+}
+.title--black {
+  color: #191919;
+}
+
+.header__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.button {
+  padding: 22px 35px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 800;
+}
+.button--primary {
+  color: #353535;
+  background-color: #f4df74;
+}
+.button--center {
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo__title {
+  font-size: 25px;
+  font-weight: 800;
+  font-family: "RFDewiExpanded";
+}
+.logo__description {
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.logo--white {
+  color: white;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: center;
+}
+.text--space {
+  margin: 0 auto 70px;
+  max-width: 640px;
+}
+.text--black {
+  color: #1a1a1a;
+}
+.text--white {
+  color: white;
+}
+
+.gallery {
+  display: grid;
+}
+.gallery--col-3 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.footer {
+  padding: 64px 0 32px;
+}
+.footer--black {
+  background-color: #191919;
+}
+.footer--underline-black {
+  border-top: 1px solid #2c2c2c;
+}
+
+.section--black {
+  background-color: #191919;
 }/*# sourceMappingURL=style.css.map */

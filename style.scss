@@ -1,3 +1,184 @@
-h1 {
-  color: white;
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@font-face {
+  font-family: "RFDewiExpanded";
+  src: url("./fonts/RFDewiExpandedBold.otf") format("otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  margin: auto;
+  max-width: 70rem;
+  display: flex;
+  flex-direction: column;
+
+  &--gap-60 {
+    gap: 60px;
+  }
+}
+
+.header {
+  padding: 2rem;
+
+  &--image {
+    background-image: url(./images/header.png);
+    height: 36rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.nav {
+  &__list {
+    @include flex-between;
+    width: 100%;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__link,
+  &__span {
+    &--white {
+      color: white;
+    }
+  }
+
+  &__link {
+    font-family: "RFDewiExpanded";
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 14px;
+  }
+
+  &__span {
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+.title {
+  text-align: center;
+  font-weight: 800;
+
+  &--space {
+    margin: 120px auto 64px;
+    max-width: 635px;
+  }
+
+  &__h1 {
+    font-size: 60px;
+  }
+  &__h2 {
+    font-size: 48px;
+  }
+  &--white {
+    color: white;
+  }
+  &--black {
+    color: #191919;
+  }
+}
+
+.header__title {
+  @include flex-center;
+  flex-direction: column;
+}
+
+.button {
+  padding: 22px 35px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 800;
+
+  &--primary {
+    color: #353535;
+    background-color: #f4df74;
+  }
+
+  &--center {
+    margin: 0 auto;
+  }
+}
+
+.logo {
+  @include flex-center;
+  &__title {
+    font-size: 25px;
+    font-weight: 800;
+    font-family: "RFDewiExpanded";
+  }
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  &--white {
+    color: white;
+  }
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: center;
+
+  &--space {
+    margin: 0 auto 70px;
+    max-width: 640px;
+  }
+
+  &--black {
+    color: #1a1a1a;
+  }
+
+  &--white {
+    color: white;
+  }
+}
+
+.gallery {
+  display: grid;
+  &--col-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+.footer {
+  padding: 64px 0 32px;
+  &--black {
+    background-color: #191919;
+  }
+  &--underline-black {
+    border-top: 1px solid #2c2c2c;
+  }
+}
+
+.section {
+  &--black {
+    background-color: #191919;
+  }
 }
