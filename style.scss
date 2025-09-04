@@ -27,8 +27,11 @@ body {
 .container {
   margin: auto;
   max-width: 70rem;
-  display: flex;
-  flex-direction: column;
+
+  &--flex {
+    display: flex;
+    flex-direction: column;
+  }
 
   &--gap-60 {
     gap: 60px;
@@ -54,19 +57,12 @@ body {
     &-item {
       display: flex;
       flex-direction: column;
-    }
-  }
-
-  &__link,
-  &__span {
-    &--white {
-      color: white;
+      align-items: flex-start;
     }
   }
 
   &__link {
     font-family: "RFDewiExpanded";
-    text-decoration: none;
     font-weight: 800;
     font-size: 14px;
   }
@@ -77,11 +73,19 @@ body {
   }
 }
 
+.link {
+  text-decoration: none;
+
+  &--white {
+    color: white;
+  }
+}
+
 .title {
   text-align: center;
   font-weight: 800;
 
-  &--space {
+  &--wrapper {
     margin: 120px auto 64px;
     max-width: 635px;
   }
@@ -110,10 +114,14 @@ body {
 
 .button {
   padding: 22px 35px;
-  border: none;
-  border-radius: 16px;
+
   font-size: 16px;
   font-weight: 800;
+
+  &--rounded {
+    border: none;
+    border-radius: 16px;
+  }
 
   &--primary {
     color: #353535;
@@ -146,17 +154,17 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
-  text-align: center;
 
-  &--space {
+  &--center {
+    text-align: center;
+  }
+  &--wrapper {
     margin: 0 auto 70px;
     max-width: 640px;
   }
-
   &--black {
     color: #1a1a1a;
   }
-
   &--white {
     color: white;
   }
@@ -177,6 +185,7 @@ body {
 
 .footer {
   padding: 64px 0 32px;
+
   &--black {
     background-color: #191919;
   }
@@ -212,19 +221,16 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
-  // TOD0 переделать
-  max-width: 640px;
-  margin: auto;
+  &--wrapper {
+    max-width: 640px;
+    margin: auto;
+  }
 
   &__card {
-    max-width: 160px;
+    @include flex-center;
 
-    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
     gap: 20px;
   }
 }
