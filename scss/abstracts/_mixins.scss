@@ -1,0 +1,47 @@
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin absolute-center-horizontal {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+@mixin bg-image($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-repeat: no-repeat;
+}

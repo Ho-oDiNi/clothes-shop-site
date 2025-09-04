@@ -1,0 +1,30 @@
+// Цвета
+$color-primary: #f4df74;
+$color-primary-hover: #fff58a;
+$color-primary-active: #dec95e;
+
+$color-black: #191919;
+$color-black-secondary: #353535;
+
+$color-white: #fff;
+$color-gray: #eeeeee;
+
+// Брейкпоинты
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1280px;
+
+// Шрифты
+$font-family-base: "Inter", sans-serif;
+$font-family-primary: "RF Dewi Expanded", $font-family-base;
+$font-family-secondary: "RF Dewi", $font-family-base;
+
+// Отступы
+$main-spacing: 0.25rem;
+
+$spacing-xl: $main-spacing * 30;
+$spacing-l: $main-spacing * 16;
+$spacing-m: $main-spacing * 8;
+$spacing-s: $main-spacing * 4;
+
+$border-radius: 1rem;

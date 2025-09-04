@@ -1,0 +1,19 @@
+@import "../abstracts/functions";
+@import "../abstracts/variables";
+
+.cooperation {
+  display: grid;
+  gap: $spacing-m;
+
+  &--wrapper {
+    max-width: calc-size(160);
+    margin: auto;
+  }
+
+  &__card {
+    @include flex-center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: calc-size(5);
+  }
+}

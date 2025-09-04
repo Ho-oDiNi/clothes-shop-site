@@ -1,0 +1,33 @@
+@import "../abstracts/functions";
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.button {
+  cursor: pointer;
+  padding: calc-size(6) $spacing-m;
+
+  font-size: $spacing-s;
+  font-weight: 800;
+
+  &--rounded {
+    border: none;
+    border-radius: $spacing-s;
+  }
+
+  &--primary {
+    color: $color-black-secondary;
+    background-color: $color-primary;
+    font-family: $font-family-primary;
+
+    &:hover {
+      background-color: $color-primary-hover;
+    }
+    &:active {
+      background-color: $color-primary-active;
+    }
+  }
+
+  &--center {
+    margin: 0 auto;
+  }
+}

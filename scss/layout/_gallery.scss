@@ -1,0 +1,27 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.gallery {
+  display: grid;
+  gap: $spacing-m;
+
+  &--col-2 {
+    grid-template-columns: repeat(2, 1fr);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &--col-3 {
+    grid-template-columns: repeat(3, 1fr);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}

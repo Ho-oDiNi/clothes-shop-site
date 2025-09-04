@@ -1,41 +1,5 @@
-@import url("./fonts/stylesheet.css");
-
-@mixin flex-between {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin absolute-center-horizontal {
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-@mixin bg-image($url) {
-  background-image: url($url);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-
-  transition-property: all;
-  transition-timing-function: var(cubic-bezier(0.4, 0, 0.2, 1));
-  transition-duration: 150ms;
-}
-
-body {
-  font-family: "Inter", sans-serif;
-}
+@import "fonts/stylesheet.css";
+// @import "scss/main";
 
 .container {
   position: relative;

@@ -1,0 +1,31 @@
+@import "../abstracts/variables";
+@import "../abstracts/functions";
+@import "../abstracts/mixins";
+
+.footer {
+  padding: $spacing-l $spacing-m;
+
+  &--black {
+    background-color: $color-black;
+  }
+
+  &--underline-black {
+    border-top: calc-size(0.25) solid #2c2c2c;
+  }
+
+  &__nav {
+    margin-bottom: $spacing-m;
+
+    @include mobile {
+      @include flex-start;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__logo {
+    @include mobile {
+      display: none;
+    }
+  }
+}

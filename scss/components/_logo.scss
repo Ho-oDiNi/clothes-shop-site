@@ -1,0 +1,32 @@
+@import "../abstracts/functions";
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.logo {
+  @include flex-center;
+  flex-direction: column;
+
+  &__title {
+    font-size: calc-size(6);
+    font-weight: 800;
+    font-family: $font-family-primary;
+    z-index: 99;
+  }
+
+  &__description {
+    font-family: $font-family-secondary;
+    font-weight: 200;
+    font-size: $spacing-s;
+    text-transform: uppercase;
+    z-index: 99;
+  }
+
+  &--white {
+    color: $color-white;
+  }
+
+  &--absolute {
+    @include absolute-center-horizontal;
+    top: 0;
+  }
+}

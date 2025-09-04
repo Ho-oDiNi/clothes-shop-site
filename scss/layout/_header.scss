@@ -1,0 +1,24 @@
+@import "../abstracts/variables";
+@import "../abstracts/functions";
+@import "../abstracts/mixins";
+
+.header {
+  padding: $spacing-m;
+
+  &--image {
+    height: calc-size(144);
+    @include bg-image("./images/header.png");
+    position: relative;
+  }
+
+  &__nav {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__title {
+    @include flex-center;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,35 @@
+@layer abstract, base, typography, layout, components;
+
+@layer abstract {
+  @import "abstracts/variables";
+  @import "abstracts/mixins";
+  @import "abstracts/functions";
+}
+
+@layer base {
+  @import "base/reset";
+}
+
+@layer typography {
+  @import "base/typography";
+}
+
+@layer layout {
+  @import "layout/container";
+  @import "layout/footer";
+  @import "layout/gallery";
+  @import "layout/header";
+}
+
+@layer components {
+  @import "components/about-card";
+  @import "components/action-window";
+  @import "components/button";
+  @import "components/cooperation";
+  @import "components/hgroup";
+  @import "components/image";
+  @import "components/logo";
+  @import "components/nav";
+  @import "components/product-card";
+}
+@import "abstracts/mixins";
