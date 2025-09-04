@@ -79,6 +79,8 @@ body {
 }
 .title--wrapper {
   margin-bottom: 64px;
+}
+.title--max-w-l {
   max-width: 635px;
 }
 .title--max-w-xl {
@@ -198,8 +200,11 @@ body {
 .section--padding-bottom {
   padding-bottom: 170px;
 }
-.section--padding-top {
+.section--padding-top-l {
   padding-top: 170px;
+}
+.section--padding-top-xl {
+  padding-top: 740px;
 }
 
 .about-card__image {
@@ -228,12 +233,18 @@ body {
   gap: 20px;
 }
 
+.image {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
 .image--rounded {
   border-radius: 16px;
 }
 
 .action-window {
-  height: 360px;
+  padding: 80px 0;
   width: 100%;
 }
 .action-window--bg-presentation {
@@ -260,6 +271,9 @@ body {
 .action-window--rounded {
   border-radius: 16px;
 }
+.action-window--no-bottom {
+  padding-bottom: 0;
+}
 .action-window__title {
   font-size: 24px;
   margin-bottom: 32px;
@@ -269,6 +283,22 @@ body {
 }
 .action-window__title--max-w-xl {
   max-width: 440px;
+}
+.action-window__gallery {
+  display: flex;
+}
+.action-window__gallery-card {
+  position: relative;
+}
+.action-window__gallery-image {
+  height: 100%;
+}
+.action-window__gallery-text {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  font-size: 24px;
+  font-weight: 800;
 }
 
 .hgroup--flex {
