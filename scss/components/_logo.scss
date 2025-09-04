@@ -30,3 +30,9 @@
     top: 0;
   }
 }
+
+.footer__logo {
+  @include mobile {
+    display: none;
+  }
+}
