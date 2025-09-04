@@ -10,6 +10,12 @@
   justify-content: center;
 }
 
+@mixin absolute-center-horizontal {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
 @font-face {
   font-family: "RFDewiExpanded";
   src: url("./fonts/RFDewiExpandedBold.otf") format("otf");
@@ -28,13 +34,14 @@ body {
   margin: auto;
   max-width: 70rem;
 
-  &--flex {
-    display: flex;
-    flex-direction: column;
+  &--wrapper {
+    padding: 120px 0;
   }
 
-  &--gap-60 {
-    gap: 60px;
+  &--flex {
+    height: 100%;
+    @include flex-center;
+    flex-direction: column;
   }
 }
 
@@ -47,9 +54,15 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  &__container--absolute {
+    @include absolute-center-horizontal;
+  }
 }
 
 .nav {
+  width: 100%;
+
   &__list {
     @include flex-between;
     width: 100%;
@@ -86,7 +99,8 @@ body {
   font-weight: 800;
 
   &--wrapper {
-    margin: 120px auto 64px;
+    // margin: 120px auto 64px;
+    margin-bottom: 64px;
     max-width: 635px;
   }
 
@@ -196,6 +210,10 @@ body {
   &--underline-black {
     border-top: 1px solid #2c2c2c;
   }
+
+  &__nav {
+    margin-bottom: 32px;
+  }
 }
 
 .section {
@@ -236,5 +254,11 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     gap: 20px;
+  }
+}
+
+.image {
+  &--rounded {
+    border-radius: 16px;
   }
 }

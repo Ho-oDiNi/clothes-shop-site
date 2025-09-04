@@ -19,7 +19,7 @@
   </head>
   <body>
     <header class="header header--image">
-      <div class="container container--flex">
+      <div class="container header__container--absolute">
         <nav class="nav nav--white">
           <ul class="nav__list">
             <li class="nav__list-item">
@@ -38,6 +38,8 @@
             </li>
           </ul>
         </nav>
+      </div>
+      <div class="container container--flex">
         <h1 class="title title--wrapper title__h1 title--white">
           Сделано в&nbsp;Санкт&#8209;Петербурге
         </h1>
@@ -48,7 +50,7 @@
     </header>
     <main>
       <section class="section section--white">
-        <div class="container container--flex">
+        <div class="container container--wrapper container--flex">
           <hgroup>
             <h2 class="title title--wrapper title__h2 title--black">
               Современный мерчендайз для бизнеса
@@ -62,7 +64,7 @@
           <div class="gallery gallery--col-3">
             <div class="product-card">
               <img
-                class="product__image"
+                class="product__image image image--rounded"
                 src="./images/hoodies.png"
                 alt="Девушка в желтом худи, держится за капюшон"
               />
@@ -70,7 +72,7 @@
             </div>
             <div class="product-card">
               <img
-                class="product__image"
+                class="product__image image image--rounded"
                 src="./images/tshirts.png"
                 alt="Парень с татуировками в черной футболке с красной надписью VSRAP, прикрывает лицо"
               />
@@ -78,7 +80,7 @@
             </div>
             <div class="product-card">
               <img
-                class="product__image"
+                class="product__image image image--rounded"
                 src="./images/sweatshirts.png"
                 alt="Девушка в зеленом свитшоте улыбается"
               />
@@ -86,7 +88,7 @@
             </div>
             <div class="product-card">
               <img
-                class="product__image"
+                class="product__image image image--rounded"
                 src="./images/sweatshirts.png"
                 alt="Девушка в синих штанах смотрит в пол"
               />
@@ -94,7 +96,7 @@
             </div>
             <div class="product-card">
               <img
-                class="product__image"
+                class="product__image image image--rounded"
                 src="./images/shoppers.png"
                 alt="Черный шопер с розовым граффити"
               />
@@ -102,7 +104,7 @@
             </div>
             <div class="product-card">
               <img
-                class="product__image"
+                class="product__image image image--rounded"
                 src="./images/caps.png"
                 alt="Черная кепка с красной надписью VSRAP"
               />
@@ -112,7 +114,7 @@
         </div>
       </section>
       <section class="section section--gray">
-        <div class="container container--flex">
+        <div class="container container--wrapper container--flex">
           <hgroup>
             <h2 class="title title--wrapper title__h2 title--black">
               Производство одежды для компаний, брендов, артистов
@@ -128,7 +130,7 @@
               <img
                 src="./images/advantage-1.png"
                 alt="Разработка лекал и дизайна"
-                class="about-card__image"
+                class="about-card__image image image--rounded"
               />
               <hgroup class="about-card__hgroup">
                 <h3 class="title title--black title__h3">Разработка лекал и дизайна</h3>
@@ -142,7 +144,7 @@
               <img
                 src="./images/advantage-2.png"
                 alt="Пошив одежды на заказ"
-                class="about-card__image"
+                class="about-card__image image image--rounded"
               />
               <hgroup class="about-card__hgroup">
                 <h3 class="title title--black title__h3">Пошив одежды на заказ</h3>
@@ -156,7 +158,7 @@
               <img
                 src="./images/advantage-3.png"
                 alt="Бренд одежды под ключ"
-                class="about-card__image"
+                class="about-card__image image image--rounded"
               />
               <hgroup class="about-card__hgroup">
                 <h3 class="title title--black title__h3">Бренд одежды под ключ</h3>
@@ -169,13 +171,17 @@
         </div>
       </section>
       <section class="section section--white">
-        <div class="container container--flex">
+        <div class="container container--wrapper container--flex">
           <h2 class="title title--wrapper title__h2 title--black">
             Способы нанесения принтов и вышивка
           </h2>
           <div class="gallery gallery--col-2">
             <div class="about-card">
-              <img src="./images/methods-1.png" alt="Шелкография" class="about-card__image" />
+              <img
+                src="./images/methods-1.png"
+                alt="Шелкография"
+                class="about-card__image image image--rounded"
+              />
               <hgroup class="about-card__hgroup">
                 <h3 class="title title--black title__h3">Шелкография</h3>
                 <p class="text text--center text--black">
@@ -186,7 +192,11 @@
               </hgroup>
             </div>
             <div class="about-card">
-              <img src="./images/methods-2.png" alt="Вышивка на одежде" class="about-card__image" />
+              <img
+                src="./images/methods-2.png"
+                alt="Вышивка на одежде"
+                class="about-card__image image image--rounded"
+              />
               <hgroup class="about-card__hgroup">
                 <h3 class="title title--black title__h3">Вышивка на одежде</h3>
                 <p class="text text--center text--black">
@@ -200,7 +210,7 @@
         </div>
       </section>
       <section class="section section--black">
-        <div class="container container--flex">
+        <div class="container container--wrapper container--flex">
           <hgroup>
             <h2 class="title title--wrapper title__h2 title--white">Схема работы с нами</h2>
             <p class="text text--center text--wrapper text--white">
@@ -210,29 +220,45 @@
           </hgroup>
           <div class="cooperation cooperation--wrapper">
             <div class="cooperation__card">
-              <img src="./images/Vector-1.svg" alt="" class="cooperation__image" />
+              <img
+                src="./images/Vector-1.svg"
+                alt=""
+                class="cooperation__image image image--rounded"
+              />
               <p class="text text--center text--white">
                 Отправляете заявку или звоните
                 <a class="link link--white" href="tel:+79111099707">+7 (911) 109-97-07</a>
               </p>
             </div>
             <div class="cooperation__card">
-              <img src="./images/Vector-2.svg" alt="" class="cooperation__image" />
+              <img
+                src="./images/Vector-2.svg"
+                alt=""
+                class="cooperation__image image image--rounded"
+              />
               <p class="text text--center text--white">Разрабатываем лекала и шьём образец</p>
             </div>
             <div class="cooperation__card">
-              <img src="./images/Vector-3.svg" alt="" class="cooperation__image" />
+              <img
+                src="./images/Vector-3.svg"
+                alt=""
+                class="cooperation__image image image--rounded"
+              />
               <p class="text text--center text--white">Шьём тираж и наносим принт или вышивку</p>
             </div>
             <div class="cooperation__card">
-              <img src="./images/Vector-4.svg" alt="" class="cooperation__image" />
+              <img
+                src="./images/Vector-4.svg"
+                alt=""
+                class="cooperation__image image image--rounded"
+              />
               <p class="text text--center text--white">Упаковываем и отгружаем вашу партию</p>
             </div>
           </div>
         </div>
       </section>
       <section class="section section--white">
-        <div class="container container--flex">
+        <div class="container container--wrapper container--flex">
           <hgroup>
             <h2 class="title title--wrapper title--max-w-xl title__h2 title--black">
               Все вещи мы шьём на собственном производстве в Санкт-Петербурге по собственному
@@ -244,18 +270,42 @@
             </p>
           </hgroup>
           <div class="gallery gallery--col-3">
-            <img src="./images/production-1.png" alt="Помещение с пошивом одежды" class="image" />
-            <img src="./images/production-2.png" alt="Оверлок на столе" class="image" />
-            <img src="./images/production-3.png" alt="Станок для шитья" class="image" />
-            <img src="./images/production-4.png" alt="Станок для шитья" class="image" />
-            <img src="./images/production-5.png" alt="Карточки с логотипом" class="image" />
-            <img src="./images/production-6.png" alt="Девушка шьет одежду" class="image" />
+            <img
+              src="./images/production-1.png"
+              alt="Помещение с пошивом одежды"
+              class="image image--rounded"
+            />
+            <img
+              src="./images/production-2.png"
+              alt="Оверлок на столе"
+              class="image image--rounded"
+            />
+            <img
+              src="./images/production-3.png"
+              alt="Станок для шитья"
+              class="image image--rounded"
+            />
+            <img
+              src="./images/production-4.png"
+              alt="Станок для шитья"
+              class="image image--rounded"
+            />
+            <img
+              src="./images/production-5.png"
+              alt="Карточки с логотипом"
+              class="image image--rounded"
+            />
+            <img
+              src="./images/production-6.png"
+              alt="Девушка шьет одежду"
+              class="image image--rounded"
+            />
           </div>
         </div>
       </section>
 
       <section class="section section--black">
-        <div class="container container--flex">
+        <div class="container container--wrapper container--flex">
           <hgroup>
             <h2 class="title title--wrapper title__h2 title--white">Наши коллаборации</h2>
             <p class="text text--center text--wrapper text--white">
@@ -265,25 +315,58 @@
             </p>
           </hgroup>
           <div class="gallery gallery--col-3">
-            <img src="./images/collab-1.png" alt="Парень в черной футболке с зеленым рисунком" />
-            <img src="./images/collab-2.png" alt="Девушка в черном худи с аниме рисунком" />
-            <img src="./images/collab-3.png" alt="Парень в зеленым худи с желтым рисунком" />
-            <img src="./images/collab-4.png" alt="Парень в черном худи с желтым рисунком" />
-            <img src="./images/collab-5.png" alt="Девушка в черном худи с белым рисунком" />
-            <img src="./images/collab-6.png" alt="Девушка в черном худи с розовым рисунком" />
             <img
+              class="image image--rounded"
+              src="./images/collab-1.png"
+              alt="Парень в черной футболке с зеленым рисунком"
+            />
+            <img
+              class="image image--rounded"
+              src="./images/collab-2.png"
+              alt="Девушка в черном худи с аниме рисунком"
+            />
+            <img
+              class="image image--rounded"
+              src="./images/collab-3.png"
+              alt="Парень в зеленым худи с желтым рисунком"
+            />
+            <img
+              class="image image--rounded"
+              src="./images/collab-4.png"
+              alt="Парень в черном худи с желтым рисунком"
+            />
+            <img
+              class="image image--rounded"
+              src="./images/collab-5.png"
+              alt="Девушка в черном худи с белым рисунком"
+            />
+            <img
+              class="image image--rounded"
+              src="./images/collab-6.png"
+              alt="Девушка в черном худи с розовым рисунком"
+            />
+            <img
+              class="image image--rounded"
               src="./images/collab-7.png"
               alt="Три парня в черных футболках с зелеными рисунками"
             />
-            <img src="./images/collab-8.png" alt="Девушка в оранжевым футболке с черным рисунком" />
-            <img src="./images/collab-9.png" alt="Парень в черном худи с разноцветным рисунком" />
+            <img
+              class="image image--rounded"
+              src="./images/collab-8.png"
+              alt="Девушка в оранжевым футболке с черным рисунком"
+            />
+            <img
+              class="image image--rounded"
+              src="./images/collab-9.png"
+              alt="Парень в черном худи с разноцветным рисунком"
+            />
           </div>
         </div>
       </section>
     </main>
     <footer class="footer footer--black footer--underline-black">
-      <div class="container container--flex container--gap-60">
-        <nav class="nav nav--white">
+      <div class="container container--flex">
+        <nav class="footer__nav nav nav--white">
           <ul class="nav__list">
             <li class="nav__list-item">
               <a href="tel:+79253431696" class="nav__link link link--white">+7 925 343 16 96</a>
