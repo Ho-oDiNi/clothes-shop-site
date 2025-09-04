@@ -40,6 +40,7 @@ body {
   position: absolute;
   left: 0;
   right: 0;
+  z-index: 99;
 }
 
 .nav {
@@ -71,6 +72,9 @@ body {
 }
 .link--white {
   color: white;
+}
+.link:hover {
+  opacity: 70%;
 }
 
 .title {
@@ -110,6 +114,7 @@ body {
 }
 
 .button {
+  cursor: pointer;
   padding: 22px 35px;
   font-size: 16px;
   font-weight: 800;
@@ -121,6 +126,12 @@ body {
 .button--primary {
   color: #353535;
   background-color: #f4df74;
+}
+.button--primary:hover {
+  background-color: #fff58a;
+}
+.button--primary:active {
+  background-color: #dec95e;
 }
 .button--center {
   margin: 0 auto;
@@ -286,6 +297,8 @@ body {
 }
 .action-window__gallery {
   display: flex;
+  overflow: hidden;
+  width: 100%;
 }
 .action-window__gallery-card {
   position: relative;
@@ -306,4 +319,11 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.product__name {
+  font-size: 24px;
+}
+.product__price {
+  font-size: 18px;
 }/*# sourceMappingURL=style.css.map */

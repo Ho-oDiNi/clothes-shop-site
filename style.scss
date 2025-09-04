@@ -62,6 +62,7 @@ body {
 
   &__container--absolute {
     @include absolute-center-horizontal;
+    z-index: 99;
   }
 }
 
@@ -96,6 +97,10 @@ body {
 
   &--white {
     color: white;
+  }
+
+  &:hover {
+    opacity: 70%;
   }
 }
 
@@ -138,6 +143,7 @@ body {
 }
 
 .button {
+  cursor: pointer;
   padding: 22px 35px;
 
   font-size: 16px;
@@ -151,6 +157,13 @@ body {
   &--primary {
     color: #353535;
     background-color: #f4df74;
+
+    &:hover {
+      background-color: #fff58a;
+    }
+    &:active {
+      background-color: #dec95e;
+    }
   }
 
   &--center {
@@ -332,6 +345,8 @@ body {
 
   &__gallery {
     display: flex;
+    overflow: hidden;
+    width: 100%;
 
     &-card {
       position: relative;
@@ -356,5 +371,14 @@ body {
   &--flex {
     @include flex-center;
     flex-direction: column;
+  }
+}
+
+.product {
+  &__name {
+    font-size: 24px;
+  }
+  &__price {
+    font-size: 18px;
   }
 }
