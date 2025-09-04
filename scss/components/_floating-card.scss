@@ -2,7 +2,7 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
 
-.action-window {
+.floating-card {
   width: 100%;
   padding: calc-size(20) 0;
 
@@ -34,7 +34,7 @@
   }
 }
 
-.action-window__title {
+.floating-card__title {
   margin-bottom: $spacing-l;
 
   &--max-w-l {
@@ -45,7 +45,7 @@
   }
 }
 
-.action-window__gallery {
+.floating-card__gallery {
   width: 100%;
   @include flex-center;
 

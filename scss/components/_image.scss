@@ -35,7 +35,7 @@
   max-width: calc-size(30);
 }
 
-.action-window__gallery-image {
+.floating-card__gallery-image {
   @extend .image;
   position: relative;
   max-height: calc-size(115);
