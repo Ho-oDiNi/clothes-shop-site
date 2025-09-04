@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "RF Dewi";
+  src: url("RFDewi-Ultralight.eot");
+  src: local("RF Dewi Ultralight"), local("RFDewi-Ultralight"),
+    url("RFDewi-Ultralight.eot?#iefix") format("embedded-opentype"),
+    url("RFDewi-Ultralight.woff2") format("woff2"), url("RFDewi-Ultralight.woff") format("woff"),
+    url("RFDewi-Ultralight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RF Dewi";
+  src: url("RFDewi-Regular.eot");
+  src: local("RF Dewi Regular"), local("RFDewi-Regular"),
+    url("RFDewi-Regular.eot?#iefix") format("embedded-opentype"),
+    url("RFDewi-Regular.woff2") format("woff2"), url("RFDewi-Regular.woff") format("woff"),
+    url("RFDewi-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RF Dewi Expanded";
+  src: url("RFDewiExpanded-Ultrabold.eot");
+  src: local("RF Dewi Expanded Ultrabold"), local("RFDewiExpanded-Ultrabold"),
+    url("RFDewiExpanded-Ultrabold.eot?#iefix") format("embedded-opentype"),
+    url("RFDewiExpanded-Ultrabold.woff2") format("woff2"),
+    url("RFDewiExpanded-Ultrabold.woff") format("woff"),
+    url("RFDewiExpanded-Ultrabold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}

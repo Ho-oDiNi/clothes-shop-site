@@ -1,3 +1,7 @@
+@import url("./fonts/stylesheet.css");
+
+//RF Dewi Expanded
+
 @mixin flex-between {
   display: flex;
   align-items: center;
@@ -20,11 +24,6 @@
   background-image: url($url);
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-@font-face {
-  font-family: "RFDewiExpanded";
-  src: url("./fonts/RFDewiExpandedBold.otf") format("otf");
 }
 
 * {
@@ -74,6 +73,8 @@ body {
     width: 100%;
 
     &-item {
+      width: 160px;
+
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -81,12 +82,13 @@ body {
   }
 
   &__link {
-    font-family: "RFDewiExpanded";
+    font-family: "RF Dewi Expanded", "Inter", sans-serif;
     font-weight: 800;
     font-size: 14px;
   }
 
   &__span {
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 14px;
   }
@@ -107,17 +109,10 @@ body {
 .title {
   text-align: center;
   font-weight: 800;
+  font-family: "RF Dewi Expanded", "Inter", sans-serif;
 
   &--wrapper {
     margin-bottom: 64px;
-  }
-
-  &--max-w-l {
-    max-width: 635px;
-  }
-
-  &--max-w-xl {
-    max-width: 1340px;
   }
 
   &__h1 {
@@ -157,6 +152,7 @@ body {
   &--primary {
     color: #353535;
     background-color: #f4df74;
+    font-family: "RF Dewi Expanded", "Inter", sans-serif;
 
     &:hover {
       background-color: #fff58a;
@@ -176,10 +172,11 @@ body {
   &__title {
     font-size: 25px;
     font-weight: 800;
-    font-family: "RFDewiExpanded";
+    font-family: "RF Dewi Expanded", "Inter", sans-serif;
   }
   &__description {
-    font-weight: 400;
+    font-family: "RF Dewi", "Inter", sans-serif;
+    font-weight: 200;
     font-size: 16px;
     text-transform: uppercase;
   }
@@ -301,8 +298,9 @@ body {
 }
 
 .action-window {
-  padding: 80px 0;
   width: 100%;
+  padding: 80px 0;
+  overflow: hidden;
 
   &--bg-presentation {
     @include bg-image("./images/presentation.png");
@@ -336,20 +334,20 @@ body {
     margin-bottom: 32px;
 
     &--max-w-l {
-      max-width: 340px;
+      max-width: 400px;
     }
     &--max-w-xl {
-      max-width: 440px;
+      max-width: 600px;
     }
   }
 
   &__gallery {
     display: flex;
-    overflow: hidden;
     width: 100%;
 
     &-card {
       position: relative;
+      height: 100%;
     }
 
     &-image {
@@ -361,6 +359,7 @@ body {
       bottom: 25px;
       left: 25px;
 
+      font-family: "RF Dewi Expanded", "Inter", sans-serif;
       font-size: 24px;
       font-weight: 800;
     }
@@ -377,8 +376,10 @@ body {
 .product {
   &__name {
     font-size: 24px;
+    font-family: "RF Dewi", "Inter", sans-serif;
   }
   &__price {
     font-size: 18px;
+    font-family: "RF Dewi", "Inter", sans-serif;
   }
 }

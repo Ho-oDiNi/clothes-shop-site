@@ -1,7 +1,4 @@
-@font-face {
-  font-family: "RFDewiExpanded";
-  src: url("./fonts/RFDewiExpandedBold.otf") format("otf");
-}
+@import url("./fonts/stylesheet.css");
 * {
   margin: 0;
   padding: 0;
@@ -53,16 +50,18 @@ body {
   width: 100%;
 }
 .nav__list-item {
+  width: 160px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 .nav__link {
-  font-family: "RFDewiExpanded";
+  font-family: "RF Dewi Expanded", "Inter", sans-serif;
   font-weight: 800;
   font-size: 14px;
 }
 .nav__span {
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 14px;
 }
@@ -80,15 +79,10 @@ body {
 .title {
   text-align: center;
   font-weight: 800;
+  font-family: "RF Dewi Expanded", "Inter", sans-serif;
 }
 .title--wrapper {
   margin-bottom: 64px;
-}
-.title--max-w-l {
-  max-width: 635px;
-}
-.title--max-w-xl {
-  max-width: 1340px;
 }
 .title__h1 {
   font-size: 60px;
@@ -126,6 +120,7 @@ body {
 .button--primary {
   color: #353535;
   background-color: #f4df74;
+  font-family: "RF Dewi Expanded", "Inter", sans-serif;
 }
 .button--primary:hover {
   background-color: #fff58a;
@@ -145,10 +140,11 @@ body {
 .logo__title {
   font-size: 25px;
   font-weight: 800;
-  font-family: "RFDewiExpanded";
+  font-family: "RF Dewi Expanded", "Inter", sans-serif;
 }
 .logo__description {
-  font-weight: 400;
+  font-family: "RF Dewi", "Inter", sans-serif;
+  font-weight: 200;
   font-size: 16px;
   text-transform: uppercase;
 }
@@ -255,8 +251,9 @@ body {
 }
 
 .action-window {
-  padding: 80px 0;
   width: 100%;
+  padding: 80px 0;
+  overflow: hidden;
 }
 .action-window--bg-presentation {
   background-image: url("./images/presentation.png");
@@ -290,18 +287,18 @@ body {
   margin-bottom: 32px;
 }
 .action-window__title--max-w-l {
-  max-width: 340px;
+  max-width: 400px;
 }
 .action-window__title--max-w-xl {
-  max-width: 440px;
+  max-width: 600px;
 }
 .action-window__gallery {
   display: flex;
-  overflow: hidden;
   width: 100%;
 }
 .action-window__gallery-card {
   position: relative;
+  height: 100%;
 }
 .action-window__gallery-image {
   height: 100%;
@@ -310,6 +307,7 @@ body {
   position: absolute;
   bottom: 25px;
   left: 25px;
+  font-family: "RF Dewi Expanded", "Inter", sans-serif;
   font-size: 24px;
   font-weight: 800;
 }
@@ -323,7 +321,9 @@ body {
 
 .product__name {
   font-size: 24px;
+  font-family: "RF Dewi", "Inter", sans-serif;
 }
 .product__price {
   font-size: 18px;
+  font-family: "RF Dewi", "Inter", sans-serif;
 }/*# sourceMappingURL=style.css.map */
