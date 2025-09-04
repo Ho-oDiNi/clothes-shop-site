@@ -6,13 +6,11 @@
   position: relative;
   margin: 0 auto;
   max-width: calc-size(280);
-  width: 100%;
-  padding: 0 $spacing-m;
 
   &--flex {
+    height: 100%;
     @include flex-center;
     flex-direction: column;
-    height: 100%;
   }
 
   &--wrapper {
@@ -21,21 +19,5 @@
     @include mobile {
       padding: $spacing-l 0;
     }
-  }
-
-  &--flex-between {
-    @include flex-between;
-  }
-
-  @include mobile {
-    padding: 0 $spacing-s;
-  }
-
-  @include tablet {
-    padding: 0 $spacing-m;
-  }
-
-  @include desktop {
-    padding: 0;
   }
 }

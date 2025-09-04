@@ -2,6 +2,49 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
 
+.action-window {
+  width: 100%;
+  padding: calc-size(20) 0;
+
+  &--bg-presentation {
+    @include bg-image("./images/presentation.png");
+  }
+
+  &--bg-realization {
+    @include bg-image("./images/realization.png");
+  }
+
+  &--flex {
+    flex-direction: column;
+    @include flex-center;
+  }
+
+  &--absolute {
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+  }
+
+  &--rounded {
+    border-radius: $border-radius;
+  }
+
+  &--no-bottom {
+    padding-bottom: 0;
+  }
+}
+
+.action-window__title {
+  margin-bottom: $spacing-l;
+
+  &--max-w-l {
+    max-width: calc-size(100);
+  }
+  &--max-w-xl {
+    max-width: calc-size(150);
+  }
+}
+
 .action-window__gallery {
   width: 100%;
   @include flex-center;
@@ -23,6 +66,7 @@
     position: absolute;
     bottom: calc-size(6);
     left: calc-size(6);
+
     font-family: $font-family-primary;
     font-size: calc-size(6);
     font-weight: 800;

@@ -3,18 +3,18 @@
 @import "../abstracts/mixins";
 
 .footer {
-  padding: $spacing-l $spacing-m;
+  padding: $spacing-l $spacing-m $spacing-m;
 
   &--black {
     background-color: $color-black;
   }
 
   &--underline-black {
-    border-top: calc-size(0.25) solid #2c2c2c;
+    border-top: calc-size(0.25) solid $color-black-secondary;
   }
 
   &__nav {
-    margin-bottom: $spacing-m;
+    margin-bottom: $spacing-l;
 
     @include mobile {
       @include flex-start;

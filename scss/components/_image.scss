@@ -35,9 +35,8 @@
   max-width: calc-size(30);
 }
 
-// Стили для изображений в галерее акционных окон
 .action-window__gallery-image {
   @extend .image;
   position: relative;
-  max-height: 460px;
+  max-height: calc-size(115);
 }

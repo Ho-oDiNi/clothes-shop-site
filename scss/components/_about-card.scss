@@ -1,13 +1,4 @@
 @import "../abstracts/variables";
 
 .about-card {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-m;
-
-  &__hgroup {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-s;
-  }
 }

@@ -5,9 +5,10 @@
   display: grid;
   gap: $spacing-m;
 
-  &--wrapper {
-    max-width: calc-size(160);
-    margin: auto;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   &__card {
@@ -15,5 +16,10 @@
     flex-wrap: wrap;
     flex-direction: column;
     gap: calc-size(5);
+  }
+
+  &--wrapper {
+    max-width: calc-size(160);
+    margin: auto;
   }
 }

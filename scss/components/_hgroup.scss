@@ -9,3 +9,9 @@
     flex-direction: column;
   }
 }
+
+.about-card__hgroup {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-s;
+}

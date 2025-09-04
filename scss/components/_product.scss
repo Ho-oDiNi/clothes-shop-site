@@ -2,15 +2,10 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
 
-.product-card {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-s;
-
+.product {
   &__name {
     font-family: $font-family-secondary;
     font-size: calc-size(6);
-    text-align: center;
   }
 
   &__price {
