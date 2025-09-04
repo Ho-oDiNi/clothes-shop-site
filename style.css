@@ -16,6 +16,11 @@ body {
 .container--wrapper {
   padding: 120px 0;
 }
+@media (max-width: 768px) {
+  .container--wrapper {
+    padding: 60px 0;
+  }
+}
 .container--flex {
   height: 100%;
   display: flex;
@@ -33,24 +38,33 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.header__container--absolute {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
 
 .nav {
   width: 100%;
+}
+.nav--absolute {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .nav--absolute {
+    bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .nav--absolute {
+    top: 0;
+  }
 }
 .nav__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  gap: 32px;
 }
 .nav__list-item {
-  width: 160px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -87,11 +101,26 @@ body {
 .title__h1 {
   font-size: 60px;
 }
+@media (max-width: 1024px) {
+  .title__h1 {
+    font-size: 35px;
+  }
+}
 .title__h2 {
   font-size: 48px;
 }
+@media (max-width: 1024px) {
+  .title__h2 {
+    font-size: 30px;
+  }
+}
 .title__h3 {
-  font-size: 20px;
+  font-size: 24px;
+}
+@media (max-width: 1024px) {
+  .title__h3 {
+    font-size: 20px;
+  }
 }
 .title--white {
   color: white;
@@ -136,20 +165,29 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .logo__title {
   font-size: 25px;
   font-weight: 800;
   font-family: "RF Dewi Expanded", "Inter", sans-serif;
+  z-index: 99;
 }
 .logo__description {
   font-family: "RF Dewi", "Inter", sans-serif;
   font-weight: 200;
   font-size: 16px;
   text-transform: uppercase;
+  z-index: 99;
 }
 .logo--white {
   color: white;
+}
+.logo--absolute {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 .text {
@@ -178,12 +216,27 @@ body {
 .gallery--col-2 {
   grid-template-columns: repeat(2, 1fr);
 }
+@media (max-width: 768px) {
+  .gallery--col-2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .gallery--col-3 {
   grid-template-columns: repeat(3, 1fr);
 }
+@media (max-width: 1280px) {
+  .gallery--col-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .gallery--col-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 .footer {
-  padding: 64px 0 32px;
+  padding: 64px 32px 32px;
 }
 .footer--black {
   background-color: #191919;
@@ -194,7 +247,23 @@ body {
 .footer__nav {
   margin-bottom: 32px;
 }
+@media (max-width: 768px) {
+  .footer__nav {
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .footer__logo {
+    display: none;
+  }
+}
 
+.section {
+  padding: 0 32px;
+}
 .section--gray {
   background-color: #eeeeee;
 }
@@ -211,7 +280,12 @@ body {
   padding-top: 170px;
 }
 .section--padding-top-xl {
-  padding-top: 740px;
+  padding-top: 700px;
+}
+@media (max-width: 768px) {
+  .section--padding-top-xl {
+    padding-top: 1100px;
+  }
 }
 
 .about-card__image {
@@ -225,7 +299,13 @@ body {
 
 .cooperation {
   display: grid;
+  gap: 32px;
   grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 768px) {
+  .cooperation {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .cooperation--wrapper {
   max-width: 640px;
@@ -239,8 +319,17 @@ body {
   flex-direction: column;
   gap: 20px;
 }
+.cooperation__image {
+  max-width: 110px;
+}
 
 .image {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
@@ -283,7 +372,6 @@ body {
   padding-bottom: 0;
 }
 .action-window__title {
-  font-size: 24px;
   margin-bottom: 32px;
 }
 .action-window__title--max-w-l {
@@ -293,15 +381,29 @@ body {
   max-width: 600px;
 }
 .action-window__gallery {
-  display: flex;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .action-window__gallery {
+    flex-direction: column;
+  }
 }
 .action-window__gallery-card {
   position: relative;
   height: 100%;
 }
+.action-window__gallery-link {
+  width: 100%;
+}
 .action-window__gallery-image {
-  height: 100%;
+  position: relative;
+  bottom: -4px;
+  width: 100%;
+  max-height: 460px;
+  height: auto;
 }
 .action-window__gallery-text {
   position: absolute;
@@ -311,7 +413,13 @@ body {
   font-size: 24px;
   font-weight: 800;
 }
+.action-window__gallery--black {
+  background-color: #191919;
+}
 
+.hgroup {
+  padding: 0 32px;
+}
 .hgroup--flex {
   display: flex;
   align-items: center;

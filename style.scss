@@ -1,7 +1,5 @@
 @import url("./fonts/stylesheet.css");
 
-//RF Dewi Expanded
-
 @mixin flex-between {
   display: flex;
   align-items: center;
@@ -42,6 +40,10 @@ body {
 
   &--wrapper {
     padding: 120px 0;
+
+    @media (max-width: 768px) {
+      padding: 60px 0;
+    }
   }
 
   &--flex {
@@ -58,23 +60,28 @@ body {
     height: 36rem;
     @include bg-image("./images/header.png");
   }
-
-  &__container--absolute {
-    @include absolute-center-horizontal;
-    z-index: 99;
-  }
 }
 
 .nav {
   width: 100%;
 
+  &--absolute {
+    @include absolute-center-horizontal;
+    z-index: 2;
+
+    @media (max-width: 768px) {
+      bottom: 0;
+    }
+    @media (min-width: 768px) {
+      top: 0;
+    }
+  }
+
   &__list {
     @include flex-between;
-    width: 100%;
+    gap: 32px;
 
     &-item {
-      width: 160px;
-
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -117,12 +124,24 @@ body {
 
   &__h1 {
     font-size: 60px;
+
+    @media (max-width: 1024px) {
+      font-size: 35px;
+    }
   }
   &__h2 {
     font-size: 48px;
+
+    @media (max-width: 1024px) {
+      font-size: 30px;
+    }
   }
   &__h3 {
-    font-size: 20px;
+    font-size: 24px;
+
+    @media (max-width: 1024px) {
+      font-size: 20px;
+    }
   }
   &--white {
     color: white;
@@ -169,19 +188,27 @@ body {
 
 .logo {
   @include flex-center;
+  flex-direction: column;
+
   &__title {
     font-size: 25px;
     font-weight: 800;
     font-family: "RF Dewi Expanded", "Inter", sans-serif;
+    z-index: 99;
   }
   &__description {
     font-family: "RF Dewi", "Inter", sans-serif;
     font-weight: 200;
     font-size: 16px;
     text-transform: uppercase;
+    z-index: 99;
   }
   &--white {
     color: white;
+  }
+  &--absolute {
+    @include absolute-center-horizontal;
+    top: 0;
   }
 }
 
@@ -211,15 +238,27 @@ body {
 
   &--col-2 {
     grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &--col-3 {
     grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: 1280px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
 
 .footer {
-  padding: 64px 0 32px;
+  padding: 64px 32px 32px;
 
   &--black {
     background-color: #191919;
@@ -230,10 +269,25 @@ body {
 
   &__nav {
     margin-bottom: 32px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      align-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__logo {
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }
 
 .section {
+  padding: 0 32px;
+
   &--gray {
     background-color: #eeeeee;
   }
@@ -253,7 +307,11 @@ body {
   }
 
   &--padding-top-xl {
-    padding-top: 740px;
+    padding-top: 700px;
+
+    @media (max-width: 768px) {
+      padding-top: 1100px;
+    }
   }
 }
 
@@ -270,7 +328,13 @@ body {
 
 .cooperation {
   display: grid;
+  gap: 32px;
+
   grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   &--wrapper {
     max-width: 640px;
@@ -284,9 +348,18 @@ body {
     flex-direction: column;
     gap: 20px;
   }
+
+  &__image {
+    max-width: 110px;
+  }
 }
 
 .image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
@@ -330,7 +403,6 @@ body {
   }
 
   &__title {
-    font-size: 24px;
     margin-bottom: 32px;
 
     &--max-w-l {
@@ -342,16 +414,28 @@ body {
   }
 
   &__gallery {
-    display: flex;
     width: 100%;
+    @include flex-center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
 
     &-card {
       position: relative;
       height: 100%;
     }
 
+    &-link {
+      width: 100%;
+    }
+
     &-image {
-      height: 100%;
+      position: relative;
+      bottom: -4px;
+      width: 100%;
+      max-height: 460px;
+      height: auto;
     }
 
     &-text {
@@ -363,10 +447,16 @@ body {
       font-size: 24px;
       font-weight: 800;
     }
+
+    &--black {
+      background-color: #191919;
+    }
   }
 }
 
 .hgroup {
+  padding: 0 32px;
+
   &--flex {
     @include flex-center;
     flex-direction: column;
