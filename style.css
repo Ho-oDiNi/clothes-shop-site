@@ -12,6 +12,7 @@ body {
 }
 
 .container {
+  position: relative;
   margin: auto;
   max-width: 70rem;
 }
@@ -30,8 +31,8 @@ body {
   padding: 2rem;
 }
 .header--image {
-  background-image: url(./images/header.png);
   height: 36rem;
+  background-image: url("./images/header.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -194,6 +195,12 @@ body {
 .section--black {
   background-color: #191919;
 }
+.section--padding-bottom {
+  padding-bottom: 170px;
+}
+.section--padding-top {
+  padding-top: 170px;
+}
 
 .about-card__image {
   margin-bottom: 32px;
@@ -223,4 +230,50 @@ body {
 
 .image--rounded {
   border-radius: 16px;
+}
+
+.action-window {
+  height: 360px;
+  width: 100%;
+}
+.action-window--bg-presentation {
+  background-image: url("./images/presentation.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.action-window--bg-realization {
+  background-image: url("./images/realization.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.action-window--flex {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.action-window--absolute {
+  position: absolute;
+  top: 50%;
+  z-index: 99;
+}
+.action-window--rounded {
+  border-radius: 16px;
+}
+.action-window__title {
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+.action-window__title--max-w-l {
+  max-width: 340px;
+}
+.action-window__title--max-w-xl {
+  max-width: 440px;
+}
+
+.hgroup--flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */

@@ -16,6 +16,12 @@
   right: 0;
 }
 
+@mixin bg-image($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 @font-face {
   font-family: "RFDewiExpanded";
   src: url("./fonts/RFDewiExpandedBold.otf") format("otf");
@@ -31,6 +37,7 @@ body {
 }
 
 .container {
+  position: relative;
   margin: auto;
   max-width: 70rem;
 
@@ -49,10 +56,8 @@ body {
   padding: 2rem;
 
   &--image {
-    background-image: url(./images/header.png);
     height: 36rem;
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include bg-image("./images/header.png");
   }
 
   &__container--absolute {
@@ -226,6 +231,14 @@ body {
   &--black {
     background-color: #191919;
   }
+
+  &--padding-bottom {
+    padding-bottom: 170px;
+  }
+
+  &--padding-top {
+    padding-top: 170px;
+  }
 }
 
 .about-card {
@@ -260,5 +273,53 @@ body {
 .image {
   &--rounded {
     border-radius: 16px;
+  }
+}
+
+.action-window {
+  height: 360px;
+  width: 100%;
+
+  &--bg-presentation {
+    @include bg-image("./images/presentation.png");
+  }
+
+  &--bg-realization {
+    @include bg-image("./images/realization.png");
+  }
+
+  &--flex {
+    flex-direction: column;
+    @include flex-center;
+  }
+
+  &--absolute {
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+  }
+
+  &--rounded {
+    border-radius: 16px;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 32px;
+
+    &--max-w-l {
+      max-width: 340px;
+    }
+
+    &--max-w-xl {
+      max-width: 440px;
+    }
+  }
+}
+
+.hgroup {
+  &--flex {
+    @include flex-center;
+    flex-direction: column;
   }
 }
