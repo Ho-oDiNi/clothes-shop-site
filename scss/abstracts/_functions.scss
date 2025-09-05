@@ -1,5 +1,5 @@
 @import "variables";
 
 @function calc-size($size) {
-  @return $size * $main-spacing;
+  @return $size * $main-size;
 }
