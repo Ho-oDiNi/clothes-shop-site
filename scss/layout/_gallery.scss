@@ -3,7 +3,7 @@
 
 .gallery {
   display: grid;
-  gap: $spacing-m;
+  gap: $size-l;
 
   &--col-2 {
     grid-template-columns: repeat(2, 1fr);

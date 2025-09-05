@@ -5,7 +5,7 @@
 .product {
   &__name {
     font-family: $font-family-secondary;
-    font-size: calc-size(6);
+    font-size: $size-m;
   }
 
   &__price {

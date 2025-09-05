@@ -3,7 +3,7 @@
 @import "../abstracts/mixins";
 
 .footer {
-  padding: $spacing-l $spacing-m $spacing-m;
+  padding: $size-xl $size-l $size-l;
 
   &--black {
     background-color: $color-black;
@@ -14,7 +14,7 @@
   }
 
   &__nav {
-    margin-bottom: $spacing-l;
+    margin-bottom: $size-xl;
 
     @include mobile {
       @include flex-start;

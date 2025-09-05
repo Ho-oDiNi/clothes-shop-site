@@ -22,7 +22,7 @@
 
   &__list {
     @include flex-between;
-    gap: $spacing-m;
+    gap: $size-l;
 
     &-item {
       display: flex;
@@ -36,7 +36,7 @@
   &__link {
     font-family: $font-family-primary;
     font-weight: 800;
-    font-size: calc-size(3.5);
+    font-size: $size-xs;
 
     @include mobile {
       text-align: center;
@@ -46,6 +46,6 @@
   &__span {
     font-family: $font-family-base;
     font-weight: 400;
-    font-size: calc-size(3.5);
+    font-size: $size-xs;
   }
 }

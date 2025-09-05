@@ -14,10 +14,10 @@
   }
 
   &--wrapper {
-    padding: $spacing-xl 0;
+    padding: $size-2xl 0;
 
     @include mobile {
-      padding: $spacing-l 0;
+      padding: $size-xl 0;
     }
   }
 }

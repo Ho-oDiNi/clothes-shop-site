@@ -7,7 +7,7 @@
   flex-direction: column;
 
   &__title {
-    font-size: calc-size(6);
+    font-size: $size-m;
     font-weight: 800;
     font-family: $font-family-primary;
     z-index: 99;
@@ -16,7 +16,7 @@
   &__description {
     font-family: $font-family-secondary;
     font-weight: 200;
-    font-size: $spacing-s;
+    font-size: $size-s;
     text-transform: uppercase;
     z-index: 99;
   }

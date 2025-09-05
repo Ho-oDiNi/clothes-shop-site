@@ -26,7 +26,7 @@
   }
 
   &--rounded {
-    border-radius: $border-radius;
+    border-radius: $radius-xl;
   }
 
   &--no-bottom {
@@ -35,7 +35,7 @@
 }
 
 .floating-card__title {
-  margin-bottom: $spacing-l;
+  margin-bottom: $size-xl;
 
   &--max-w-l {
     max-width: calc-size(100);
@@ -64,11 +64,11 @@
 
   &-text {
     position: absolute;
-    bottom: calc-size(6);
-    left: calc-size(6);
+    bottom: $size-m;
+    left: $size-m;
 
     font-family: $font-family-primary;
-    font-size: calc-size(6);
+    font-size: $size-m;
     font-weight: 800;
   }
 

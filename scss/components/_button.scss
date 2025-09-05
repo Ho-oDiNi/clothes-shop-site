@@ -4,14 +4,14 @@
 
 .button {
   cursor: pointer;
-  padding: calc-size(6) $spacing-m;
+  padding: $size-m $size-l;
 
-  font-size: $spacing-s;
+  font-size: $size-s;
   font-weight: 800;
 
   &--rounded {
     border: none;
-    border-radius: $spacing-s;
+    border-radius: $size-s;
   }
 
   &--primary {

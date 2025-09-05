@@ -14,25 +14,25 @@
   -o-user-drag: none;
 
   &--rounded {
-    border-radius: $border-radius;
+    border-radius: $radius-xl;
   }
 }
 
 .product__image {
   @extend .image;
   @extend .image--rounded;
-  margin-bottom: $spacing-s;
+  margin-bottom: $size-s;
 }
 
 .about-card__image {
   @extend .image;
   @extend .image--rounded;
-  margin-bottom: $spacing-m;
+  margin-bottom: $size-l;
 }
 
 .cooperation__image {
   @extend .image;
-  max-width: calc-size(30);
+  max-width: $size-2xl;
 }
 
 .floating-card__gallery-image {

@@ -3,7 +3,7 @@
 @import "../abstracts/mixins";
 
 .header {
-  padding: $spacing-m;
+  padding: $size-l;
 
   &--image {
     height: calc-size(144);

@@ -3,7 +3,7 @@
 @import "../abstracts/mixins";
 
 .section {
-  padding: 0 $spacing-m;
+  padding: 0 $size-l;
 
   &--gray {
     background-color: $color-gray;

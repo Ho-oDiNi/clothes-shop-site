@@ -2,7 +2,7 @@
 @import "../abstracts/mixins";
 
 .hgroup {
-  padding: 0 $spacing-m;
+  padding: 0 $size-l;
 
   &--flex {
     @include flex-center;
@@ -13,5 +13,5 @@
 .about-card__hgroup {
   display: flex;
   flex-direction: column;
-  gap: $spacing-s;
+  gap: $size-s;
 }
